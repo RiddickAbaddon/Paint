@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Paint</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="img/icon.png">
+</head>
+<body>
+    <div class="paint">
+        <div class="paint-bar">
+            <div class="undoredo">
+                <a class="download" title="Pobierz rysunek"></a>
+                <button class="undo" disabled title="Wstecz"></button>
+                <button class="redo" disabled title="Do przodu"></button>
+            </div>
+            <div class="paint-options">
+                <div class="option-paint-size">
+                    <span class="option-text">Rozmiar:</span> 
+                    <input id="paintSize" type="range" class="paint-size option" min="1" max="50" value="5">
+                    <output for="paintSize" class="paint-size-val option-val"></output>
+                </div>
+                <div class="option-round-size">
+                    <span class="option-text">Zaokrąglenie:</span> 
+                    <input id="roundSize" type="range" class="round-size option" min="1" max="100" value="5">
+                    <output for="roundSize" class="round-size-val option-val"></output>
+                </div>
+                <div class="option-rubber-size">
+                    <span class="option-text">Gumka:</span> 
+                    <input id="rubberSize" type="range" class="rubber-size option" min="1" max="500" value="100">
+                    <output for="rubberSize" class="rubber-size-val option-val"></output>
+                </div>
+                <div class="option-sampler-info">
+                    <span class="option-text coordinates">X:0 Y:0</span>
+                    <br/> 
+                    <span class="option-text color-info">R:0 G:0 B:0 A:0</span>
+                </div>
+            </div>
+            <input type="color" class="paint-color" title="Kolor">
+            <button class="paint-fill" title="Wypełnienie">FILL</button>
+            <div class="paint-buttons-cnt">
+                <button data-mode="draw" class="button-mode" type="button" title="Rysowanie">
+                    Draw
+                </button>
+                <button data-mode="line" class="button-mode" type="button" title="Linia">
+                    Line
+                </button>
+                <button data-mode="rectangle" class="button-mode" type="button" title="Prostokąt">
+                    Rectangle
+                </button>
+                <button data-mode="rounded-rectangle" class="button-mode" type="button" title="Zaokrąglony prostokąt">
+                    Rounded Rectangle
+                </button>
+                <button data-mode="circle" class="button-mode" type="button" title="Koło">
+                    Circle
+                </button>
+                <button data-mode="elipse" class="button-mode" type="button" title="Elipsa">
+                    Elipse
+                </button>
+                <button data-mode="triangle" class="button-mode" type="button" title="Trójkąt">
+                    Triangle
+                </button>
+                <button data-mode="any-shape" class="button-mode" type="button" title="Dowolny kształt">
+                    Any shape
+                </button>
+                <button data-mode="curves" class="button-mode" type="button" title="Krzywa">
+                    Curves
+                </button>
+                <button data-mode="rubber" class="button-mode" type="button" title="Gumka">
+                    Rubber
+                </button>
+                <button data-mode="sampler" class="button-mode" type="button" title="Próbnik">
+                    Sampler
+                </button>
+                <button class="fill" title="Wypełnij kanał alfa kolorem">Fill</button>
+            </div>
+        </div>
+        <div class="paint-canvas-cnt">
+
+        </div>
+    </div>
+    <script src="paint.js"></script>
+</body>
+</html>
